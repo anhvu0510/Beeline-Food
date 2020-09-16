@@ -60,14 +60,10 @@ app.use((err, req, res, next) => {
 
 db.sync()
     .then(() => {
-        console.log('OKE');
         app.listen(PORT, () => console.log(`Server is listening at PORT : ${PORT}`))
     })
     .catch(err => {
-        console.log(`PORT : ${process.env.PORT}`);
-        console.log(`HOST : ${process.env.DB_HOST_HOST}`);
-        console.log(`DB_NAME : ${process.env.DB_NAME_HOST}`);
-        console.log(`DB_USERNAME : ${process.env.DB_USERNAME_HOST}`);
+        console.log(`TEST : ${process.env.DB_HOST_HOST_TEST}`);
         console.log(err)
     })
 //postgres://untkbnvlqgcxad:e44566259f2ee117fefd2443dde161e96627d9ef0aae3cdd29bb5ae0ad229a62@ec2-34-253-148-186.eu-west-1.compute.amazonaws.com:5432/d91t03tieo03n6
