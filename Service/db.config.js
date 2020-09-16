@@ -1,6 +1,6 @@
 const { Sequelize } = require('sequelize')
 const USERNAME = process.env.DB_USERNAME_LOCAL || process.env.DB_USERNAME_HOST
-const PASSWORD = process.env.DB_PASSWORD_LOCAL || process.env.DB_PASSWORLD_HOST
+const PASSWORD = process.env.DB_PASSWORD_LOCAL || process.env.DB_PASSWORD_HOST
 const DB_NAME = process.env.DB_NAME_LOCAL || process.env.DB_NAME_HOST
 const HOST = process.env.DB_HOST_LOCAL || process.env.DB_HOST_HOST
 
