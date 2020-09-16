@@ -8,14 +8,14 @@ const flash = require("connect-flash");
 const app = express();
 
 const PORT = 3000 || process.env.PORT
-
-app.use(express.static('Public'))
 // View engine
 app.set('view engine', 'ejs');
 app.set('views', './Views')
 // Body parser
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: false }))
+// Public Folder
+app.use(express.static('Public'))
 // Session
 app.use(
     session({
@@ -44,9 +44,6 @@ app.use(Passport.initialize())
 app.use(Passport.session())
 //app.use(require("./middleware/auth"));
 
-
-
-
 // Router
 app.use('/', require('./Routes/index.router'))
 
@@ -66,3 +63,4 @@ db.sync()
         app.listen(PORT, () => console.log(`Server is listening at PORT : ${PORT}`))
     })
     .catch(err => console.log(err))
+//postgres://untkbnvlqgcxad:e44566259f2ee117fefd2443dde161e96627d9ef0aae3cdd29bb5ae0ad229a62@ec2-34-253-148-186.eu-west-1.compute.amazonaws.com:5432/d91t03tieo03n6

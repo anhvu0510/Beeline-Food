@@ -1,13 +1,13 @@
-const {DB_USERNAME,DB_PASSWORD,DB_HOST,DB_NAME} = process.env
 const { Sequelize } = require('sequelize')
+const USERNAME = process.env.DB_USERNAME_LOCAL || process.env.DB_USERNAME_HOST
+const PASSWORD = process.env.DB_PASSWORD_LOCAL || process.env.DB_PASSWORLD_HOST
+const DB_NAME = process.env.DB_NAME_LOCAL || process.env.DB_NAME_HOST
+const HOST = process.env.DB_HOST_LOCAL || process.env.DB_HOST_HOST
 
-
-const db = new Sequelize(DB_NAME, DB_USERNAME, DB_PASSWORD, {
-    host: DB_HOST,
+const db = new Sequelize(DB_NAME, USERNAME, PASSWORD, {
+    host: HOST,
     dialect:  'postgres'
 });
-
-
 module.exports = db
 
 
