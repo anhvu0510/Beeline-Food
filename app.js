@@ -7,7 +7,7 @@ const session = require('express-session')
 const flash = require("connect-flash");
 const app = express();
 
-const PORT = 3000 || process.env.PORT
+const PORT = process.env.PORT || 3000
 // View engine
 app.set('view engine', 'ejs');
 app.set('views', './Views')
