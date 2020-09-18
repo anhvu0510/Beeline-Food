@@ -60,7 +60,6 @@ app.use((err, req, res, next) => {
 
 db.sync()
     .then(() => {
-        console.log(`TEST : ${process.env.DB_HOST_HOST_TEST}`);
         app.listen(PORT, () => console.log(`Server is listening at PORT : ${PORT}`))
     })
     .catch(err => {
