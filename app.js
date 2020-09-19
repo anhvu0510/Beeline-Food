@@ -46,7 +46,12 @@ app.use(Passport.session())
 
 // Router
 app.use('/', require('./Routes/index.router'))
-
+app.use('/dash-board',require('./Routes/dashboard.route'))
+app.use('/products',require('./Routes/product.route'))
+app.use('/trades',require('./Routes/trade.route'))
+app.use('/receipts',require('./Routes/receipt.route'))
+app.use('/issues',require('./Routes/issue.route'))
+app.use('/bills',require('./Routes/bill.route'))
 
 //Page 404
 app.use((req, res) => {
