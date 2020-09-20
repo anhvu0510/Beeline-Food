@@ -1,0 +1,53 @@
+<div class="main-nav">
+  <nav>
+    <div class="main-nav-logo">
+      <img src="img/logo.png" alt="" />
+    </div>
+    <h3>MENU</h3>
+    <ul>
+      <li>
+        <a class="<%= isActive == 0 ? 'active': ' ' %>" href="/trang-chu">
+          <img src="img/data-analysis.png" alt="" />
+          Trang Chủ
+        </a>
+      </li>
+      <li>
+        <a  class="<%= isActive == 1 ? 'active': ' ' %>" href="/san-pham">
+          <img src="img/shipping.png" alt="" />
+          Sản Phẩm
+        </a>
+      </li>
+      <li>
+        <a class="<%= isActive == 2 ? 'active': ' ' %>" href="/doanh-thu">
+          <img src="img/money.png" alt="" />
+          Doanh Thu
+        </a>
+      </li>
+      <li>
+        <a class="<%= isActive == 3 ? 'active': ' ' %>" href="/nhap-kho">
+          <img src="img/add.png" alt="" />
+          Nhập Kho
+        </a>
+      </li>
+      <li>
+        <a class="<%= isActive == 4 ? 'active': ' ' %>" href="/xuat-kho">
+          <img src="img/minus.png" alt="" />
+          Xuất Kho
+        </a>
+      </li>
+      <li>
+        <a class="<%= isActive == 5 ? 'active': ' ' %>" href="/don-hang">
+          <img src="img/bill.png" alt="" />
+          Đơn Hàng
+        </a>
+      </li>
+      <li></li>
+    </ul>
+    <div class="btn-out">
+      <a href="/trang-chu/log-out">
+        <i class="fa fa-power-off"></i>
+        Đăng Xuất
+      </a>
+    </div>
+  </nav>
+</div>

@@ -1,21 +1,27 @@
 require('dotenv').config()
-const db = require('./Service/db.config')
 const express = require('express')
 const bodyParser = require('body-parser')
-const Passport = require('./Middleware/passport')
 const session = require('express-session')
 const flash = require("connect-flash");
+const path = require('path')
+
+
+const db = require('./Service/db.config')
+const Passport = require('./Middleware/passport')
+const { isLogin} = require('./Middleware/auth')
 const app = express();
 
 const PORT = process.env.PORT || 3000
+
+app.use(flash());
+// Public Folder
+app.use(express.static(path.join(__dirname, 'Public')))
+
+
+
 // View engine
 app.set('view engine', 'ejs');
-app.set('views', './Views')
-// Body parser
-app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: false }))
-// Public Folder
-app.use(express.static('Public'))
+app.set('Views', './Views')
 // Session
 app.use(
     session({
@@ -30,7 +36,15 @@ app.use(
     })
 );
 
-app.use(flash());
+//Passport
+app.use(Passport.initialize())
+app.use(Passport.session())
+// Body parser
+app.use(bodyParser.json())
+app.use(bodyParser.urlencoded({ extended: true }))
+
+
+
 app.use((req, res, next) => {
     res.locals.success_msg = req.flash('success_msg')
     res.locals.error_msg = req.flash('error_msg')
@@ -40,18 +54,18 @@ app.use((req, res, next) => {
 
 
 // Middleware
-app.use(Passport.initialize())
-app.use(Passport.session())
+
 //app.use(require("./middleware/auth"));
 
 // Router
 app.use('/', require('./Routes/index.router'))
-app.use('/dash-board',require('./Routes/dashboard.route'))
-app.use('/products',require('./Routes/product.route'))
-app.use('/trades',require('./Routes/trade.route'))
-app.use('/receipts',require('./Routes/receipt.route'))
-app.use('/issues',require('./Routes/issue.route'))
-app.use('/bills',require('./Routes/bill.route'))
+app.use(isLogin)
+app.use('/trang-chu',require('./Routes/dashboard.route'))
+app.use('/san-pham',require('./Routes/product.route'))
+app.use('/doanh-thu',require('./Routes/trade.route'))
+app.use('/nhap-kho',require('./Routes/receipt.route'))
+app.use('/xuat-kho',require('./Routes/issue.route'))
+app.use('/don-hang',require('./Routes/bill.route'))
 
 //Page 404
 app.use((req, res) => {

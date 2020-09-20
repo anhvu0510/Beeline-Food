@@ -4,8 +4,9 @@ const { processLogout,processLoadDashBoard} = require('../Controllers/dashboard.
 const router = express.Router();
 
 
-router.use(isLogin)
-router.get('/',processLoadDashBoard)
+
+router.get('/', processLoadDashBoard)
+router.get('/log-out',processLogout)
 
 
 module.exports = router

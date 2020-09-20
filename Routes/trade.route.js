@@ -3,8 +3,6 @@ const { isLogin } = require('../Middleware/auth')
 const { processLoadPage } = require('../Controllers/trade.controller');
 const router = express.Router();
 
-
-router.use(isLogin)
 router.get('/', processLoadPage)
 
 

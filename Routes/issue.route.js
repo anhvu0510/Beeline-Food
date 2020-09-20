@@ -4,7 +4,7 @@ const { processLoadPage } = require('../Controllers/issue.controller');
 const router = express.Router();
 
 
-router.use(isLogin)
+
 router.get('/', processLoadPage)
 
 

@@ -3,18 +3,6 @@ const localStrategy = require('passport-local').Strategy;
 const User = require('../Models/user.model');
 
 
-//Passport Init:
-Passport.serializeUser(function (user, done) {
-    return done(null, user.id);
-});
-
-Passport.deserializeUser((userId, done) => {
-    User.findByPk(userId)
-        .then((account) => {
-            return done(null, account);
-        })
-        .catch((err) => console.log(err + ''));
-});
 
 //Login Local
 Passport.use(
@@ -26,7 +14,7 @@ Passport.use(
         },
         async (user_name, password, done) => {
             User
-                .findOne({ where: { user_name }, raw: true })
+                .findOne({ where: { user_name },attributes:['id','user_name','password'], raw: true })
                 .then(user => {
                     if (!user) {
                         return done(null, false, { message: 'Account does not exist' });
@@ -41,4 +29,18 @@ Passport.use(
         }
     )
 );
+
+//Passport Init:
+Passport.serializeUser(function (user, done) {
+    return done(null, user.id);
+});
+
+Passport.deserializeUser((userId, done) => {
+    User.findByPk(userId)
+        .then((user) => {
+            return done(null, user);
+        })
+        .catch((err) => console.log(err + ''));
+});
+
 module.exports = Passport;
