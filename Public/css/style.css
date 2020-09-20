@@ -794,7 +794,12 @@ iframe {
 .main-nav-logo {
   display: flex;
   justify-content: center;
-  margin-top: 10px;
+  margin: 10px auto 0px auto;
+  background-image: url('../img/logo.png');
+  background-size: cover;
+  background-position: center;
+  width: 200px;
+  height: 200px;
 }
 
 .main-nav-logo > img {
