@@ -9,6 +9,6 @@ $(window).on('load', function () {
     $(".loader").fadeOut();
     $("#preloder").delay(2000).fadeOut("slow");
 
-    $('.wrapper').fadeIn(1500)
+    $('.wrapper').fadeIn(3000)
 
 });
