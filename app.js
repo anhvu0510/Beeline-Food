@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, 'Public')))
 
 // View engine
 app.set('view engine', 'ejs');
-app.set('Views', './Views')
+app.set('views', './Views')
 // Session
 app.use(
     session({
