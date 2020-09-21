@@ -798,8 +798,8 @@ iframe {
   background-image: url('../img/logo.png');
   background-size: cover;
   background-position: center;
-  width: 200px;
-  height: 200px;
+  width: 13vw;
+  height: 13vw;
 }
 
 .main-nav-logo > img {
