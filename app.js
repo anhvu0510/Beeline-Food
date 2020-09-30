@@ -8,7 +8,7 @@ const path = require('path')
 
 const db = require('./Service/db.config')
 const Passport = require('./Middleware/passport')
-const { isLogin} = require('./Middleware/auth')
+const {Router} = require('./Routes/index.route')
 const app = express();
 
 const PORT = process.env.PORT || 3000
@@ -55,17 +55,8 @@ app.use((req, res, next) => {
 
 // Middleware
 
-//app.use(require("./middleware/auth"));
-
 // Router
-app.use('/', require('./Routes/index.router'))
-app.use(isLogin)
-app.use('/trang-chu',require('./Routes/dashboard.route'))
-app.use('/san-pham',require('./Routes/product.route'))
-app.use('/doanh-thu',require('./Routes/trade.route'))
-app.use('/nhap-kho',require('./Routes/receipt.route'))
-app.use('/xuat-kho',require('./Routes/issue.route'))
-app.use('/don-hang',require('./Routes/bill.route'))
+Router(app)
 
 //Page 404
 app.use((req, res) => {
@@ -73,7 +64,7 @@ app.use((req, res) => {
 })
 //Page 500
 app.use((err, req, res, next) => {
-    console.log(err);
+    console.error(err);
     res.status(500).render('500', { title: 'Page 500' })
 })
 
@@ -84,5 +75,5 @@ db.sync()
     .catch(err => {
         console.log(err)
     })
-//postgres://untkbnvlqgcxad:e44566259f2ee117fefd2443dde161e96627d9ef0aae3cdd29bb5ae0ad229a62@ec2-34-253-148-186.eu-west-1.compute.amazonaws.com:5432/d91t03tieo03n6
-//postgres://untkbnvlqgcxad:e44566259f2ee117fefd2443dde161e96627d9ef0aae3cdd29bb5ae0ad229a62@ec2-34-253-148-186.eu-west-1.compute.amazonaws.com:5432/d91t03tieo03n6
+
+

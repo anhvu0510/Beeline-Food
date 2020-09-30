@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch" : "nodemon app.js"
+    "watch" : "nodemon --delay 3s app.js"
   },
   "repository": {
     "type": "git",
