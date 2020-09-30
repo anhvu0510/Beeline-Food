@@ -1,12 +1,11 @@
 const express = require('express')
-const { isLogin } = require('../Middleware/auth')
-const { processLogout,processLoadDashBoard} = require('../Controllers/dashboard.controller');
+
 const router = express.Router();
+const dashBoardController = require('../Controllers/dashboard.controller')
 
 
-
-router.get('/', processLoadDashBoard)
-router.get('/log-out',processLogout)
+router.get('/', dashBoardController.index)
+router.get('/log-out',dashBoardController.handleLogOut)
 
 
 module.exports = router

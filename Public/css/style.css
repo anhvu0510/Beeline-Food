@@ -94,8 +94,8 @@ h1 {
   margin: 100px auto 0 auto;
   color: var(--stroke-color);
   /* font-family: "Encode Sans Semi Condensed", Verdana, sans-serif; */
-  font-family: "Farsan", cursive;
-  font-size: 10rem;
+  font-family: "Farsan", cursive !important;
+  font-size: 5rem !important;
   line-height: 10rem;
   font-weight: 200;
   text-align: center;
@@ -765,6 +765,7 @@ iframe {
   height: 100%;
   width: 100%;
   display: flex;
+  padding-right: 0px !important;
 }
 .main-nav {
   flex: 1;
@@ -775,7 +776,7 @@ iframe {
 .main-content {
   flex: 4.5;
   padding: 10px;
-  margin: 5px;
+  margin: 5px 2px;
   overflow: auto;
   box-shadow: 2px 3px 4px 4px #555555;
   background: #ebe6e681;
@@ -942,4 +943,54 @@ iframe {
 		border: 4px solid #f44336;
 		border-left-color: transparent;
 	}
+}
+
+/* Product table */
+.middle{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  height: 120px;
+  font-size: 2vw;
+}
+th{
+  text-align: center !important;
+  font-size: 1.2vw;
+  font-family: "Farsan", cursive;
+}
+td{
+  font-family: "Farsan", cursive;
+}
+.mbtn{
+  display: flex !important;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.abtn {
+  padding: 0px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 70px;
+  height: 50px;
+  margin: 2px 0px;
+}
+
+.abtn:hover > p{
+  color: #FFF;
+}
+.mbtn > a p{
+  margin: 0px !important;
+  font-weight: bold;
+  font-family: "Farsan", cursive;
+}
+.abtn > p{
+   margin: 0px !important;
+  font-weight: bold;
+  font-family: "Farsan", cursive;
+}
+.my-bg{
+  background-color: rgba(0, 0, 0, 0.85);
 }

@@ -1,4 +1,5 @@
 <%- include("Partials/header") %>
+
 <body>
   <div id="preloader">
     <div class="loader"></div>
@@ -6,7 +7,98 @@
   <div class="wrapper">
     <%- include('Partials/menu.ejs') %>
     <div class="main-content">
-      <h1>Sản Phẩm</h1>
+      <h1 class="mt-2 mb-2">Danh Sách Các Sản Phẩm</h1>
+      <div class="mbtn align-items-sm-start mb-3 add-btn">
+        <button type="button" class="btn btn-outline-primary abtn" data-toggle="modal" data-target="#modalAddProduct"
+          data-backdrop="false">
+          <i class="fas fa-plus fa-1x"></i>
+          <p>Thêm</p>
+        </button>
+        <!-- <a class="btn btn-outline-primary" href="#">
+          <i class="fas fa-plus fa-1x"></i>
+          <p>Thêm</p>
+        </a> -->
+      </div>
+      <div class="products">
+        <table class="table table-striped">
+          <thead class="thead-dark">
+            <tr>
+              <th scope="col">Mã</th>
+              <th scope="col">Hình Ảnh</th>
+              <th scope="col">Loại Sản Phẩm</th>
+              <th scope="col">Tên Sản Phẩm</th>
+              <th scope="col">Trạng Thái</th>
+              <th scope="col">Thao Tác</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">
+                <div class="middle">SB</div>
+              </th>
+              <td>
+                <div class="middle">
+                  <img width="120" height="120" src="https://drive.google.com/uc?export=view&id=1I5wY0nNrwPRVrtT91FjfzGf0w6sFg0gk" alt="Ảnh Sản Phẩm" />
+                </div>
+              </td>
+              <td>
+                <div class="middle">Khoai Sấy</div>
+              </td>
+              <td>
+                <div class="middle">Khoai Sấy Bơ</div>
+              </td>
+              <td>
+                <div class="middle">
+                  <i style="color: #00ff66" class="fas fa-check-circle"></i>
+                  <i style="display: none" style="color: #ff3300" class="fas fa-times-circle" aria-hidden="true"></i>
+                </div>
+              </td>
+              <td>
+                <div class="mbtn">
+                  <a class="btn btn-outline-danger abtn" href="#">
+                    <i class="fas fa-lock fa-1x"></i>
+                    <p>Khoá</p>
+                  </a>
+
+                  <a style="display: none" class="btn btn-outline-primary abtn" href="#">
+                    <i class="fas fa-unlock fa-1x"></i>
+                    <p>Mở Khoá</p>
+                  </a>
+
+                  <a class="btn btn-outline-info abtn" href="#">
+                    <i class="fas fa-info fa-1x"></i>
+                    <p>Chi Tiết</p>
+                  </a>
+                </div>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade my-bg" id="modalAddProduct" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+    aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h3 class="modal-title" id="exampleModalLongTitle">Thêm Mới Sản Phẩm</h3>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+            <%- include("Partials/frmAddNewProduct")%>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-outline-danger" data-dismiss="modal">
+            Đóng
+          </button>
+          <button type="submit" form="frmAddProduct" class="btn btn-primary">Thêm</button>
+        </div>
+      </div>
     </div>
   </div>
 </body>

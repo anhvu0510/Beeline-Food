@@ -1,0 +1,60 @@
+<form method="POST" action="#" id="frmAddProduct">
+    <form>
+        <h5 class="ml-2">Thông Tin Cơ Bản</h5>
+        <div class="form-row">
+            <div class="form-group col-md-3">
+                <input required type="text" class="form-control" placeholder="Mã Sản Phẩm">
+            </div>
+            <div class="form-group col-md-3">
+                <input required list="LoaiSanPham" type="text" class="form-control custom-select" placeholder="Loại Sản Phẩm">
+                <datalist id="LoaiSanPham">
+                    <option value="Khoai Sấy">1</option>
+                    <option value="Khô Gà">2</option>
+                    <option value="Khô Bò">3</option>
+                </datalist>
+            </div>
+            <div class="form-group col-md-3">
+                <input required type="text" class="form-control" placeholder="Tên Sản Phẩm">
+            </div>
+            <div class="form-group col-md-3">
+                <select required class="custom-select">
+                    <option value="" selected>Đơn Vị</option>
+                    <option value="1">Túi</option>
+                    <option value="2">Cái</option>
+                    <option value="3">Hộp</option>
+                </select>
+            </div>
+        </div>
+
+        <h5 class="ml-2">Giá Loại Nhỏ</h5>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input required type="number" class="form-control" placeholder="Giá Bán Lẻ">
+            </div>
+            <div class="form-group col-md-4">
+                <input required type="number" class="form-control" placeholder="Giá Bán Sỉ">
+            </div>
+            <div class="form-group col-md-4">
+                <input required type="number" class="form-control" placeholder="Giá Đại Lý">
+            </div>
+        </div>
+
+        <h5 class="ml-2">Giá Loại Lớn</h5>
+        <div class="form-row">
+            <div class="form-group col-md-4">
+                <input required type="number" class="form-control" placeholder="Giá Bán Lẻ">
+            </div>
+            <div class="form-group col-md-4">
+                <input required type="number" class="form-control" placeholder="Giá Bán Sỉ">
+            </div>
+            <div class="form-group col-md-4">
+                <input required type="number" class="form-control" placeholder="Giá Đại Lý">
+            </div>
+        </div>
+
+        <h5 class="ml-2">Mã Ảnh Sản Phẩm Từ Google Drive</h5>
+        <div class="form-group">
+            <input required type="text" class="form-control" placeholder="ID Ảnh Sản Phẩm Từ Google Drive">
+        </div>
+    </form>
+</form>

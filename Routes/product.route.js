@@ -1,11 +1,12 @@
 const express = require('express')
-const { isLogin } = require('../Middleware/auth')
-const {processLoadPage} = require('../Controllers/product.controller');
-const router = express.Router();
+
+const productController = require('../Controllers/product.controller')
+
+const route = express.Router();
+
+route.get('/', productController.index)
 
 
 
-router.get('/', processLoadPage)
 
-
-module.exports = router
+module.exports = route

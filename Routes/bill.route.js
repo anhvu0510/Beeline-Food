@@ -1,11 +1,10 @@
 const express = require('express')
 
-const { processLoadPage } = require('../Controllers/bill.controller');
-const router = express.Router();
+const route = express.Router();
+const billControler = require('../Controllers/bill.controller')
 
 
+route.get('/',billControler.index)
 
-router.get('/', processLoadPage)
 
-
-module.exports = router
+module.exports = route
