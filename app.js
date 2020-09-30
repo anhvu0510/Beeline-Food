@@ -77,7 +77,7 @@ app.use((err, req, res, next) => {
     res.status(500).render('500', { title: 'Page 500' })
 })
 
-db.sync()
+db.sync({alter : true})
     .then(() => {
         app.listen(PORT, () => console.log(`Server is listening at PORT : ${PORT}`))
     })

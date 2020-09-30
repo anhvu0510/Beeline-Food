@@ -52,4 +52,5 @@ User.init(
 //     foreignKey: 'userId',
 //     targetKey: 'id',
 // });
+
 module.exports = User;
