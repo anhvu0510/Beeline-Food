@@ -23,7 +23,7 @@ const { isLogin,isLogined } = require('../Middleware/auth')
 module.exports = {
     Router: function Router(app) {
         app.use('/', otherRoute);
-        app.use(isLogin)
+        //app.use(isLogin)
         app.use('/trang-chu', dashboardRoute);
         app.use('/san-pham', productRoute);
         app.use('/doanh-thu', tradeRoute);

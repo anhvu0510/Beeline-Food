@@ -316,6 +316,7 @@ h2 {
 body,
 html {
   height: 100%;
+  font-size: 18px !important;
   /* font-family: Poppins-Regular, sans-serif; */
 }
 

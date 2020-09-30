@@ -2,59 +2,80 @@
     <form>
         <h5 class="ml-2">Thông Tin Cơ Bản</h5>
         <div class="form-row">
-            <div class="form-group col-md-3">
-                <input required type="text" class="form-control" placeholder="Mã Sản Phẩm">
+            <div class="form-group col-md-4">
+                <div class="middle img-thumbnail">
+                    <img id="imgProduct" width="120" height="120" src="img/logo-3.jpg"/>
+                </div>
+                <div class="form-group">
+                    <label for="#" class="Mã Ảnh"></label>
+                    <input name="MaAnh"  required type="text" class="form-control" placeholder="ID Ảnh ">
+                </div>
+
             </div>
-            <div class="form-group col-md-3">
-                <input required list="LoaiSanPham" type="text" class="form-control custom-select" placeholder="Loại Sản Phẩm">
-                <datalist id="LoaiSanPham">
-                    <option value="Khoai Sấy">1</option>
-                    <option value="Khô Gà">2</option>
-                    <option value="Khô Bò">3</option>
-                </datalist>
-            </div>
-            <div class="form-group col-md-3">
-                <input required type="text" class="form-control" placeholder="Tên Sản Phẩm">
-            </div>
-            <div class="form-group col-md-3">
-                <select required class="custom-select">
-                    <option value="" selected>Đơn Vị</option>
-                    <option value="1">Túi</option>
-                    <option value="2">Cái</option>
-                    <option value="3">Hộp</option>
-                </select>
+            <div class="form-group col-md-8 mt-lg-auto">
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="#">Mã Sản Phẩm</label>
+                        <input  required type="text" class="form-control" name="MaSanPham" id="MaSanPham">
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="#">Tên Sản Phẩm</label>
+                        <input  required type="text" class="form-control" name="TenSanPham" id="TenSanPham">
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group col-md-6">
+                        <label for="#">Loại Sản Phẩm</label>
+                        <input name="LoaiSanPham"  required list="LoaiSanPham" type="text"
+                            class="form-control custom-select">
+                        <datalist id="LoaiSanPham">
+                            <option value="Khoai Sấy">1</option>
+                            <option value="Khô Gà">2</option>
+                            <option value="Khô Bò">3</option>
+                        </datalist>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                        <label for="#">Đơn Vị</label>
+                        <select name="DonVi"  required class="custom-select">
+                            <option value="" selected>***Chọn***</option>
+                            <option value="1">Túi</option>
+                            <option value="2">Cái</option>
+                            <option value="3">Hộp</option>
+                        </select>
+                    </div>
+                </div>
             </div>
         </div>
 
         <h5 class="ml-2">Giá Loại Nhỏ</h5>
         <div class="form-row">
             <div class="form-group col-md-4">
-                <input required type="number" class="form-control" placeholder="Giá Bán Lẻ">
+                <input  required type="number" class="form-control" name="NhoLe" placeholder="Giá Bán Lẻ">
             </div>
             <div class="form-group col-md-4">
-                <input required type="number" class="form-control" placeholder="Giá Bán Sỉ">
+                <input  required type="number" class="form-control" name="NhoSi" placeholder="Giá Bán Sỉ">
             </div>
             <div class="form-group col-md-4">
-                <input required type="number" class="form-control" placeholder="Giá Đại Lý">
+                <input  required type="number" class="form-control" name="NhoDaiLy" placeholder="Giá Đại Lý">
             </div>
         </div>
 
         <h5 class="ml-2">Giá Loại Lớn</h5>
         <div class="form-row">
             <div class="form-group col-md-4">
-                <input required type="number" class="form-control" placeholder="Giá Bán Lẻ">
+                <input  required type="number" class="form-control" name="LonLe" placeholder="Giá Bán Lẻ">
             </div>
             <div class="form-group col-md-4">
-                <input required type="number" class="form-control" placeholder="Giá Bán Sỉ">
+                <input  required type="number" class="form-control" name="LonSi" placeholder="Giá Bán Sỉ">
             </div>
             <div class="form-group col-md-4">
-                <input required type="number" class="form-control" placeholder="Giá Đại Lý">
+                <input  required type="number" class="form-control" name="LonDaiLy" placeholder="Giá Đại Lý">
             </div>
         </div>
 
-        <h5 class="ml-2">Mã Ảnh Sản Phẩm Từ Google Drive</h5>
-        <div class="form-group">
-            <input required type="text" class="form-control" placeholder="ID Ảnh Sản Phẩm Từ Google Drive">
-        </div>
+
     </form>
 </form>

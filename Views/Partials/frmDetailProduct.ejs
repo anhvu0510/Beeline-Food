@@ -1,0 +1,80 @@
+<form method="POST" action="#">
+    <h5 class="ml-2">Thông Tin Cơ Bản</h5>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <div class="middle img-thumbnail">
+                <img id="imgProduct" width="120" height="120"
+                    src="https://drive.google.com/uc?export=view&id=1I5wY0nNrwPRVrtT91FjfzGf0w6sFg0gk"
+                    alt="Ảnh Sản Phẩm" />
+            </div>
+            <div class="form-group">
+                <label for="#" class="Mã Ảnh"></label>
+                <input name="MaAnh" disabled required type="text" class="form-control" placeholder="ID Ảnh ">
+            </div>
+
+        </div>
+
+        <div class="form-group col-md-8 mt-lg-auto">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="#">Mã Sản Phẩm</label>
+                    <input disabled required type="text" class="form-control" name="MaSanPham" id="MaSanPham">
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="#">Tên Sản Phẩm</label>
+                    <input disabled required type="text" class="form-control" name="TenSanPham" id="TenSanPham">
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="#">Loại Sản Phẩm</label>
+                    <input name="LoaiSanPham" class="form-control"disabled required list="LoaiSanPham" type="text"
+                        class="form-control custom-select">
+                    <datalist id="LoaiSanPham">
+                        <option value="Khoai Sấy">1</option>
+                        <option value="Khô Gà">2</option>
+                        <option value="Khô Bò">3</option>
+                    </datalist>
+                </div>
+
+                <div class="form-group col-md-6">
+                    <label for="#">Đơn Vị</label>
+                    <select name="DonVi" disabled required class="custom-select">
+                        <option value="" selected>***Chọn***</option>
+                        <option value="1">Túi</option>
+                        <option value="2">Cái</option>
+                        <option value="3">Hộp</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h5 class="ml-2">Giá Loại Nhỏ</h5>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <input disabled required type="number" class="form-control" name="NhoLe" placeholder="Giá Bán Lẻ">
+        </div>
+        <div class="form-group col-md-4">
+            <input disabled required type="number" class="form-control" name="NhoSi" placeholder="Giá Bán Sỉ">
+        </div>
+        <div class="form-group col-md-4">
+            <input disabled required type="number" class="form-control" name="NhoDaiLy" placeholder="Giá Đại Lý">
+        </div>
+    </div>
+
+    <h5 class="ml-2">Giá Loại Lớn</h5>
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <input disabled required type="number" class="form-control" name="LonLe" placeholder="Giá Bán Lẻ">
+        </div>
+        <div class="form-group col-md-4">
+            <input disabled required type="number" class="form-control" name="LonSi" placeholder="Giá Bán Sỉ">
+        </div>
+        <div class="form-group col-md-4">
+            <input disabled required type="number" class="form-control" name="LonDaiLy" placeholder="Giá Đại Lý">
+        </div>
+    </div>
+</form>
