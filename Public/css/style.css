@@ -804,8 +804,8 @@ iframe {
   padding: 10px;
   margin: 5px 2px;
   overflow: auto;
-  box-shadow: 2px 3px 4px 4px #555555;
-  background: #ebe6e681;
+  /* box-shadow: 2px 3px 4px 4px #555555;
+  background: #ebe6e681; */
 }
 
 .content-header {
@@ -969,6 +969,14 @@ iframe {
   border-radius: 60px;
   animation: loader 0.8s linear infinite;
   -webkit-animation: loader 0.8s linear infinite;
+}
+
+#only-wrapper{
+  background-image: url('../img/logo-3.jpg');
+  background-repeat: no-repeat;
+  background-size: 99% 99%;
+  background-position: center;
+  
 }
 
 @keyframes loader {
