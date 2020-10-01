@@ -1,13 +1,22 @@
 <%- include("Partials/header") %>
+
 <body>
   <div id="preloader">
     <div class="loader"></div>
   </div>
-  <div class="container-fluid wrapper">
-    <%- include('Partials/menu.ejs') %>
+
+  <div class="wrapper">
+    <div id="slide-bar">
+      <%- include("Partials/menu")%>
+    </div>
     <div class="main-content">
-      <img width="1200px" height="730px" src="img/logo-3.jpg" alt="" />
+      <img src="img/logo-3.jpg" alt="" />
     </div>
   </div>
+
+  </div>
+
+
+
 </body>
 <%- include("Partials/footer") %>

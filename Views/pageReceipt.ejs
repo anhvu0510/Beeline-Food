@@ -1,13 +1,29 @@
 <%- include("Partials/header") %>
+
 <body>
   <div id="preloader">
     <div class="loader"></div>
   </div>
+
   <div class="wrapper">
-    <%- include('Partials/menu.ejs') %>
-    <div class="main-content">
-      <h1>Nhập Kho</h1>
+    <div id="slide-bar">
+      <%- include("Partials/menu")%>
     </div>
+    <div class="main-content">
+      <div class="content-header">
+        <h1>Nhập Kho</h1>
+        <div id="btnMenuSideBar" class="btn abtn">
+          <i class="fas fa-bars fa-2x"></i>
+        </div>
+      </div>
+      <div id="products" class="products">
+
+      </div>
+    </div>
+
   </div>
+
+
+
 </body>
 <%- include("Partials/footer") %>

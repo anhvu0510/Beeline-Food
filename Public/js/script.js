@@ -101,6 +101,28 @@ $(document).ready(function () {
   $("#btnDong").click(function (event) {
     $("#btnCapNhat").html("Cập Nhật");
   });
+
+  $("#btnMenuSideBar")
+    .unbind()
+    .click(function (event) {
+      $('#slide-bar').css({
+        'width': '100%',
+        'height': '100%',
+        'opacity': '1',
+      })
+    });
+  
+  $("#btn-close-menu")
+    .unbind()
+    .click(function (event) {
+      const btnClose = $(this)
+      $('#slide-bar').css({
+        'width': '0%',
+        'height': '0%',
+        'opacity': '0',
+      })
+    });
+
 });
 
 $(window).on("load", function () {
